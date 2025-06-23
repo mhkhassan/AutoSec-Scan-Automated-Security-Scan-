@@ -16,3 +16,18 @@ This project automates web vulnerability scanning using **OWASP ZAP** and genera
 3. Vulnerabilities are extracted and formatted
 4. Gemini AI suggests remediation steps
 5. A final report is generated and saved in `/reports`
+
+## 📂 Project Structure
+.
+├── .github/
+│ └── workflows/
+│ └── zap-scan.yml
+├── scripts/
+│ ├── run_zap.sh
+│ ├── parse_zap_output.py
+│ └── query_gemini.py
+├── reports/
+│ └── scan-report-YYYY-MM-DD.md
+├── requirements.txt
+├── config.yml (optional)
+└── README.md
