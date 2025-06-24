@@ -18,3 +18,32 @@ This project automates web vulnerability scanning using **OWASP ZAP** and genera
 5. A final report is generated and saved in `/reports`
 
 
+
+## 🧪 Example Report Output
+
+The final report includes:
+- ✅ Scanned URL
+- ⚠️ Vulnerabilities found by ZAP
+- 🧠 AI-based remediation advice
+
+## 🔐 Secrets Required
+
+Add the following secrets in your GitHub repository:
+- `GEMINI_API_KEY` – Your Gemini API key
+
+## 🧰 Requirements
+
+- Docker (automatically handled in GitHub Actions)
+- Python (for parsing and AI integration)
+- Gemini API key (free from Google AI Studio)
+
+## 📌 Coming Soon
+
+- Auto-email reports
+- Multiple URL support
+- Dashboard integration
+
+## 📄 License
+
+MIT License
+
