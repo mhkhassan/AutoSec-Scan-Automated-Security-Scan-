@@ -1,0 +1,16 @@
+name: ZAP Scan Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_url:
+        description: 'Target URL to scan'
+        required: true
+        default: 'https://example.com'
+
+jobs:
+  zap-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Target URL
+        run: echo "Scanning URL: ${{ github.event.inputs.target_url }}"
