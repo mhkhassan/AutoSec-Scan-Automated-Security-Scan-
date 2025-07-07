@@ -14,4 +14,3 @@ jobs:
     steps:
       - name: Show Target URL
         run: echo "Scanning URL: ${{ github.event.inputs.target_url }}"
-
