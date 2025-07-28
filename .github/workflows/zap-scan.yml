@@ -18,7 +18,7 @@ jobs:
 
       - name: ZAP Baseline Scan
         run: |
-          docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py \
+          docker run --rm -v $(pwd):/zap/wrk/:rw -t ghcr.io/zaproxy/zap-baseline:latest
           -t "${{ github.event.inputs.target_url }}" \"
           -g gen.conf -r zap_report.html || true
 
