@@ -23,7 +23,7 @@ jobs:
           -g gen.conf -r zap_report.html || true
 
       - name: Upload ZAP Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with: 
           name: zap_report
           path: zap_report.html
