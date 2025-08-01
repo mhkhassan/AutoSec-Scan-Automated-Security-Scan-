@@ -1,4 +1,4 @@
-name: ZAP Baseline Scan Workflow
+name: ZAP Baseline Scan
 
 on:
   workflow_dispatch:
@@ -9,21 +9,21 @@ on:
         default: 'https://example.com'
 
 jobs:
-  zap-scan:
+  zap_scan:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Make scan script executable
-        run: chmod +x zap_baseline_scan.sh
+      - name: Set executable permission for script
+        run: chmod +x scripts/zap_baseline_scan.sh
 
-      - name: Run ZAP Baseline Scan
-        run: ./zap_baseline_scan.sh "${{ github.event.inputs.target_url }}"
+      - name: Run ZAP scan script
+        run: ./scripts/zap_baseline_scan.sh "${{ github.event.inputs.target_url }}"
 
-      - name: Upload ZAP Report
+      - name: Upload ZAP report
         uses: actions/upload-artifact@v4
         with:
-          name: zap_report
+          name: zap-report
           path: zap_report.html
