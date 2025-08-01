@@ -22,6 +22,7 @@ jobs:
       - name: Run ZAP scan script
         run: ./scripts/zap_baseline_scan.sh "${{ github.event.inputs.target_url }}"
 
+
       - name: Upload ZAP report
         uses: actions/upload-artifact@v4
         with:
